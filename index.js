@@ -82,7 +82,7 @@ app.get('/alldevices', async(req, res) => {
         global_cookie = sessionResult.msg
         response = await traccar_allDevices(global_cookie, ids)
       }else{
-        return res.status(sessionResult.status).json({ message: 'Erro ao processar a requisição', error: sessionResult.msg })
+        return res.status(sessionResult.status).json({ message: 'ERRO ao processar a requisição', error: sessionResult.msg })
       }
     }
 
